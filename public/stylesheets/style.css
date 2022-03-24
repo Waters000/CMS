@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+  }
+
+  form label {
+    display: block;
+  }
+
+  form > div {
+    margin-bottom: 2%;
+  }
+
+.background-form{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+   
+
+   
+}
+
+.loginform {
+ background-color: bisque;
+ width: 400px;
+ margin: 15px;
+ 
+
+}
+  
+.signupform {
+    background-color: rgb(197, 197, 248);
+    width: 400px;
+    margin: 15px;
+
+   
+    
+
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+  }
+  
+  main {
+    flex: 1;
+    padding: 2% 4%;
+  }
+
+  footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+  }
