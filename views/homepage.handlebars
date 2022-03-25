@@ -1,3 +1,17 @@
 <h2>This is the home page</h2>
 
 {{> comments-details}}
+
+{{#each comments as |comment|}}
+{{> comments-details}}
+{{/each}}
+
+
+{{> user-details}}
+
+{{#each user as |user|}}
+{{> user-details}}
+{{/each}}
+
+
+{{> posts-details}}
