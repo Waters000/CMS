@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CMS</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/jass.css">
 </head>
 
 <body>
@@ -26,14 +27,17 @@
     <main>
       {{{ body }}}
     </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
+   
   </div>
   
   {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
+
   {{/if}}
 </body>
 
 </html>
+ <footer>
+      Thanks for visiting!
+    </footer>
+    
+      <script src="/javascript/logout.js"></script>
