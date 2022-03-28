@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS  cms;
+DROP DATABASE IF EXISTS  just_tech_news_db;
 
-CREATE DATABASE  cms;
+CREATE DATABASE  just_tech_news_db;

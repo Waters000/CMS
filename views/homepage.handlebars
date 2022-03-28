@@ -1,11 +1,10 @@
-<h2>This is the home page</h2>
-
-{{> comments-details}}
-
-
-
-{{> user-details}}
-
-
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info post }}
+  </li>
+  {{/each}}
+</ol>
 
 
+{{> comments post.comments}}
