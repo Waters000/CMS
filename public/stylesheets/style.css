@@ -10,8 +10,10 @@ body, html {
   color: #333;
 }
 
-.title {
+.post {
   border: solid 2px blue;
+  border-radius: 10px;
+  background-color: #9cff93;
   
 }
 

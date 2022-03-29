@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
       'id',
       'post_url',
       'title',
+      'content',
       'created_at',
     ],
     include: [
@@ -41,6 +42,31 @@ router.get('/', (req, res) => {
     });
 });
 
+
+// get all users
+router.get('/', (req, res) => {
+  console.log(req.session);
+  User.findAll({
+    attributes:  ['username', 'email', 'id'] 
+  })
+    .then(dbUserData => {
+      if (!dbUserData) {
+      res.status(404).json({message: "No users"})
+        return
+    }
+    const users = dbUserData.get({plain: true});
+    res.render('homepage', {
+      users,
+      loggedIn: req.session.loggedIn
+    });
+  })
+
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 // get single post
 router.get('/post/:id', (req, res) => {
   Post.findOne({
@@ -51,6 +77,7 @@ router.get('/post/:id', (req, res) => {
       'id',
       'post_url',
       'title',
+      'content',
       'created_at',
     ],
     include: [
